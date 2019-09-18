@@ -1,6 +1,6 @@
 FROM amazonlinux:2
 
-RUN yum install -y tar gzip && amazon-linux-extras install vim \
+RUN yum install -y tar gzip jq && amazon-linux-extras install vim \
  && curl -O https://bootstrap.pypa.io/get-pip.py && python get-pip.py --user \
  && echo 'export PATH=~/.local/bin:$PATH' >> ~/.bashrc && source ~/.bashrc \
  && pip install awscli --upgrade --user \
